@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--FixedColor-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="FixedColor" id="vXZ-lx-hvc" customClass="ViewController" customModule="Intel_Edison_Bulb" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Intel Edison Bulb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0f-G4-vzJ">
+                                <rect key="frame" x="0.0" y="60" width="375" height="56"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0J-n1-Bsw">
+                                <rect key="frame" x="59" y="128" width="32" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="192.168.1.28" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pR0-jp-3Xa" userLabel="IPField">
+                                <rect key="frame" x="91" y="124" width="192" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" keyboardAppearance="light" returnKeyType="done"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Wzq-7i-lpO" userLabel="Red">
+                                <rect key="frame" x="59" y="299" width="256" height="31"/>
+                                <color key="tintColor" red="0.79215693473815918" green="0.0" blue="0.013202615578969273" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <action selector="redUp:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="nPA-tf-pSp"/>
+                                    <action selector="redUp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uwG-Th-CmY"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="wTX-l3-MTJ" userLabel="Green">
+                                <rect key="frame" x="59" y="367" width="256" height="31"/>
+                                <color key="tintColor" red="0.0" green="0.79215693473815918" blue="0.062596666897081904" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <action selector="greenUp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="582-gD-oXf"/>
+                                    <action selector="greenUp:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="ayv-Gm-gsp"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="9xP-Sp-mbM" userLabel="Blue">
+                                <rect key="frame" x="59" y="437" width="256" height="31"/>
+                                <connections>
+                                    <action selector="blueUp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KQH-go-oWz"/>
+                                    <action selector="blueUp:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="kSs-hj-z5G"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Od-Wu-6Qd">
+                                <rect key="frame" x="59" y="270" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wg7-o7-uAT">
+                                <rect key="frame" x="59" y="184" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xL2-63-5Vd">
+                                <rect key="frame" x="59" y="338" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwQ-gU-1Pm">
+                                <rect key="frame" x="59" y="408" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HLM-gN-Wf4" userLabel="StatueBar">
+                                <color key="backgroundColor" red="0.090196080505847931" green="0.38039219379425049" blue="0.64705884456634521" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-bulb-11 copie" translatesAutoresizingMaskIntoConstraints="NO" id="GRN-oT-YlE">
+                                <rect key="frame" x="171" y="28" width="32" height="32"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="cKa-kt-thk">
+                                <rect key="frame" x="59" y="213" width="256" height="29"/>
+                                <segments>
+                                    <segment title="Sound"/>
+                                    <segment title="Manual"/>
+                                    <segment title="Programmed" enabled="NO"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <action selector="modesChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="mFO-12-HP4"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rb1-uJ-PW1" userLabel="ColorView">
+                                <rect key="frame" x="123" y="503" width="128" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-bulb-11 copie" translatesAutoresizingMaskIntoConstraints="NO" id="Y1z-cH-8e9">
+                                        <rect key="frame" x="48" y="48" width="32" height="32"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.066666670143604279" green="0.45098042488098145" blue="0.76078438758850098" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="blueSlider" destination="9xP-Sp-mbM" id="pmS-xA-N0B"/>
+                        <outlet property="greenSlider" destination="wTX-l3-MTJ" id="8ot-JG-wRi"/>
+                        <outlet property="ipField" destination="pR0-jp-3Xa" id="ECT-PN-fZT"/>
+                        <outlet property="modes" destination="cKa-kt-thk" id="bQv-Ej-WAv"/>
+                        <outlet property="outputColor" destination="rb1-uJ-PW1" id="BgH-ix-Ell"/>
+                        <outlet property="redSlider" destination="Wzq-7i-lpO" id="kMd-hs-5Rs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="322.5" y="386.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="light-bulb-11 copie" width="256" height="256"/>
+    </resources>
+</document>
